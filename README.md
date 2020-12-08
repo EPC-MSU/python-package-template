@@ -1,3 +1,4 @@
 # python-template
 
-hello_world python project template
+Простой пример-шаблон python проекта с проверкой стилей, тестами и разными стандартными файлами\папками  
+Все новые python-проекты на github.com/EPC-MSU нужно создавать из этого шаблона
