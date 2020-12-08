@@ -14,3 +14,5 @@ python -m unittest discover tests
 
 Ваш код должен быть оформлен в виде python-модуля, как hello_world
 Пишите unit-тесты к своим пакетам в tests/
+
+Создан в рамках https://ximc.ru/issues/44427
