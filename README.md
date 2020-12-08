@@ -1,2 +1,3 @@
 # python-template
-Python repository template
+
+hello_world python project template
