@@ -1,5 +1,7 @@
 Thanks for downloading our package
 
-This package does not need to be installed
+Installation:
 
-For more detailed instructions, see README.md
+python setup.py install
+
+For more detailed instructions see README.md
