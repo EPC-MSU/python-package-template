@@ -5,6 +5,7 @@ multiline-quotes = """
 builtins = _
 verbose = 2
 max-line-length = 120
+
 # Files and folders ignore list
 # -----------------------------
 # Add comments for all ignored files and folders to justify the common standard violation
@@ -17,6 +18,7 @@ exclude =
           __pycache__,
           # External dependencies
           venv
+
 # Violations ignore list
 # ======================
 # Add comments for all ignored rules to justify the common standard violation
