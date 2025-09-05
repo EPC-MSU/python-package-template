@@ -1,28 +1,50 @@
 # python-package-template
 
-Простой пример-шаблон проекта python-пакета с проверкой стилей, тестами и разными стандартными файлами\папками  
-Все новые python-пакеты на github.com/EPC-MSU нужно создавать из этого шаблона
+This is a simple python package project template. It includes
+* Flake8 code style rules, controlled with Linter
+* Github actions CI tools
+* Unit tests with a single example (add your new tests there)
+* Preconfigured gitignore file for usual python environments
+* pyproject.toml optional-dependencies for development tools
+* TOX to test over different python versions
+* pyproject.toml as the package description file for package build
 
-Запустить этот проект (из корня):
+Python packages on github.com/EPC-MSU must be build using this template as it is nonbinding at first stages of development and lays the way for more advanced approach on the next steps.
+
+## Usage instructions
+
+Note: instructions are for Linux/Mac. If you are using the Windows then change all ```python3``` commands to ```python```.
+
+Run the software (from the root dir):
 ```bash
-python -m hello_world
+python3 -m hello_world
 ```
-Запустить тесты (из корня):
+Run tests (from the root dir):
 ```bash
-python -m unittest discover tests
+python3 -m unittest discover tests
 ```
-Установить этот проект (из корня):
+Build wheel package (from the root dir):
 ```bash
-python setup.py install
+python3 -m build --wheel
 ```
-После установки им можно пользоваться:
+Install this package (requires venv since PEP 668, run from the root dir):
+```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install the package with development dependencies (editable)
+pip install -e .[dev]
+
+# Or install the package only
+pip install .
+```
+After the installation you can use the package in python's venv:
 ```python
 import hello_world
 hello_world.say_hello()
 ```
 
-Пишите unit-тесты к своим пакетам в tests/
+Don't forget to update information in pyproject.toml to match your future project, based on this template: project name, version, dependencies, optional-dependencies for development tools, compatible python versions, etc.
 
-Не забудьте актуализировать информацию о пакете в setup.py: имя проекта, версия, зависимости и пр.
-
-Создан в рамках https://ximc.ru/issues/44427
+Template was created due to https://ximc.ru/issues/44427
