@@ -30,14 +30,11 @@ python -m flake8 .
 
 ### Installation
 ```bash
-# Modern approach with pip (recommended)
+# Install the package
 pip install .
 
 # For development (editable install)
 pip install -e .
-
-# Legacy approach (shows deprecation warnings)
-python setup.py install
 ```
 
 ## Project Structure
@@ -47,7 +44,7 @@ python setup.py install
   - `hello.py` - Core module with `say_hello()` function
   - `__main__.py` - Module entry point for `python -m` execution
 - `tests/` - Unit tests using Python's unittest framework
-- `setup.py` - Package configuration and dependencies
+- `pyproject.toml` - Modern package configuration and dependencies
 - `.flake8` - Flake8 linting configuration (max line length: 120, complexity: 14)
 - `tox.ini` - Tox configuration for testing across Python versions
 - `.github/workflows/` - CI/CD workflows for testing and linting

@@ -13,14 +13,11 @@ python -m unittest discover tests
 ```
 Установить этот проект (из корня):
 ```bash
-# Modern approach with pip
+# Install the package
 pip install .
 
 # For development (editable install)
 pip install -e .
-
-# Legacy approach (may show deprecation warnings)
-python setup.py install
 ```
 После установки им можно пользоваться:
 ```python
@@ -30,6 +27,6 @@ hello_world.say_hello()
 
 Пишите unit-тесты к своим пакетам в tests/
 
-Не забудьте актуализировать информацию о пакете в setup.py: имя проекта, версия, зависимости и пр.
+Не забудьте актуализировать информацию о пакете в pyproject.toml: имя проекта, версия, зависимости и пр.
 
 Создан в рамках https://ximc.ru/issues/44427
