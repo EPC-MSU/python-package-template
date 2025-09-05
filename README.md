@@ -13,6 +13,8 @@ Python packages on github.com/EPC-MSU must be build using this template as it is
 
 ## Usage instructions
 
+Note: instructions are for Linux/Mac. If you are using the Windows then change all ```python3``` commands to ```python```.
+
 Run the software (from the root dir):
 ```bash
 python3 -m hello_world
@@ -21,7 +23,11 @@ Run tests (from the root dir):
 ```bash
 python3 -m unittest discover tests
 ```
-Install this package (from the root dir):
+Build wheel package (from the root dir):
+```bash
+python3 -m build --wheel
+```
+Install this package (requires venv since PEP 668, run from the root dir):
 ```bash
 # Create virtual environment
 python3 -m venv venv
@@ -32,11 +38,8 @@ pip install -e .[dev]
 
 # Or install the package only
 pip install .
-
-# Alternative: Install with --user flag (not recommended for development)
-pip install . --user
 ```
-After the installation you can use the package in python:
+After the installation you can use the package in python's venv:
 ```python
 import hello_world
 hello_world.say_hello()

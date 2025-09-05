@@ -31,6 +31,15 @@ pip install -e .[dev]
 python3 -m flake8 .
 ```
 
+### Building
+```bash
+# Build wheel package
+python3 -m build --wheel
+
+# Build both source distribution and wheel
+python3 -m build
+```
+
 ### Installation
 ```bash
 # Create virtual environment (recommended)
