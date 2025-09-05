@@ -1,5 +1,0 @@
-# Put your package dependencies here
-
-# Development dependencies
-flake8
-tox

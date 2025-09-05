@@ -24,8 +24,8 @@ tox
 
 ### Linting
 ```bash
-# Install linting tools first
-pip install -r requirements.txt
+# Install with development dependencies first
+pip install -e .[dev]
 
 # Run flake8 linter
 python3 -m flake8 .
@@ -37,17 +37,14 @@ python3 -m flake8 .
 python3 -m venv venv
 source venv/bin/activate
 
-# Install development dependencies
-pip install -r requirements.txt
+# Install the package with development dependencies
+pip install -e .[dev]
 
-# Install the package
+# Or install the package only
 pip install .
 
-# For development (editable install)
-pip install -e .
-
 # Alternative: Install with --user flag
-pip install . --user
+pip install .[dev] --user
 ```
 
 ## Project Structure

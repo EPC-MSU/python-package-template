@@ -1,7 +1,7 @@
 # python-package-template
 
 This is a simple python package project template. It includes
-* Flake8 code style rules, controlled with Linter.
+* Flake8 code style rules, controlled with Linter
 * Github actions CI tools
 * Unit tests with a single example (add your new tests there)
 * Preconfigured gitignore file for usual python environments
@@ -27,10 +27,10 @@ Install this package (from the root dir):
 python3 -m venv venv
 source venv/bin/activate
 
-# Install development dependencies
-pip install -r requirements.txt
+# Install the package with development dependencies
+pip install -e .[dev]
 
-# Install the package
+# Or install the package only
 pip install .
 
 # For development (editable install)
@@ -45,6 +45,6 @@ import hello_world
 hello_world.say_hello()
 ```
 
-Don't forget to update information in pyproject.toml to match your future project, based on this template: project name, version, dependencies, compatible python versions, etc.
+Don't forget to update information in pyproject.toml to match your future project, based on this template: project name, version, dependencies, optional-dependencies for development tools, compatible python versions, etc.
 
 Template was created due to https://ximc.ru/issues/44427

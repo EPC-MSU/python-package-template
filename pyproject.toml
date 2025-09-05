@@ -9,19 +9,35 @@ description = "YOUR DESCRIPTION"
 readme = "README.md"
 requires-python = ">=3.6"
 license = "CC0-1.0"
+keywords = ["template", "example"]
 authors = [
     {name = "EPC MSU", email = "YOUR_EMAIL@physlab.ru"}
 ]
 classifiers = [
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.8", 
     "Operating System :: OS Independent",
 ]
 dependencies = [
     # YOUR DEPENDENCIES ARE HERE
 ]
 
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "tox",
+]
+all = [
+    "flake8", 
+    "tox",
+]
+
 [project.urls]
 Homepage = "https://github.com/EPC-MSU/URL_TO_YOUR_PROJECT"
+Repository = "https://github.com/EPC-MSU/URL_TO_YOUR_PROJECT"
+Issues = "https://github.com/EPC-MSU/URL_TO_YOUR_PROJECT/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
