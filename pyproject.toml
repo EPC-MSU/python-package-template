@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MyHelloWorldProject"
+version = "0.0.0"
+description = "YOUR DESCRIPTION"
+readme = "README.md"
+requires-python = ">=3.6"
+license = "CC0-1.0"
+authors = [
+    {name = "EPC MSU", email = "YOUR_EMAIL@physlab.ru"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    # YOUR DEPENDENCIES ARE HERE
+]
+
+[project.urls]
+Homepage = "https://github.com/EPC-MSU/URL_TO_YOUR_PROJECT"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hello_world*"]

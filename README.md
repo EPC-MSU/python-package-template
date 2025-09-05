@@ -13,6 +13,13 @@ python -m unittest discover tests
 ```
 Установить этот проект (из корня):
 ```bash
+# Modern approach with pip
+pip install .
+
+# For development (editable install)
+pip install -e .
+
+# Legacy approach (may show deprecation warnings)
 python setup.py install
 ```
 После установки им можно пользоваться:

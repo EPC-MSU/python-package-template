@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: python -m unittest discover tests
       - name: Checking package installation
-        run: python setup.py install
+        run: pip install .

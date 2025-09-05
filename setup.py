@@ -14,7 +14,7 @@ setup(name='MyHelloWorldProject',
       license='CC0-1.0',
       packages=['hello_world'],
       install_requires=[
-            '',  # YOUR DEPENDENCIES ARE HERE
+            # YOUR DEPENDENCIES ARE HERE
       ],
       classifiers=[
             "Programming Language :: Python :: 3",
