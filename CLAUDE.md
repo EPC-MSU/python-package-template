@@ -70,7 +70,7 @@ pip install .[dev] --user
 
 ## Key Configuration
 
-- **Python Version**: Requires Python 3.6+
+- **Python Version**: Requires Python 3.8+
 - **Flake8 Settings**: Max line length 120, max complexity 14, double quotes preferred
 - **Test Framework**: Standard Python unittest
 - **CI/CD**: GitHub Actions for automated testing and linting on main and dev-** branches
