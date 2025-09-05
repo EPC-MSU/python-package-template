@@ -10,13 +10,13 @@ This is a Python package template project (`hello_world`) that serves as a stand
 
 ### Running the Project
 ```bash
-python -m hello_world
+python3 -m hello_world
 ```
 
 ### Testing
 ```bash
 # Run all tests using unittest
-python -m unittest discover tests
+python3 -m unittest discover tests
 
 # Using tox (supports py34, py36)
 tox
@@ -24,17 +24,30 @@ tox
 
 ### Linting
 ```bash
+# Install linting tools first
+pip install -r requirements.txt
+
 # Run flake8 linter
-python -m flake8 .
+python3 -m flake8 .
 ```
 
 ### Installation
 ```bash
+# Create virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements.txt
+
 # Install the package
 pip install .
 
 # For development (editable install)
 pip install -e .
+
+# Alternative: Install with --user flag
+pip install . --user
 ```
 
 ## Project Structure

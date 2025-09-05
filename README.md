@@ -5,19 +5,29 @@
 
 Запустить этот проект (из корня):
 ```bash
-python -m hello_world
+python3 -m hello_world
 ```
 Запустить тесты (из корня):
 ```bash
-python -m unittest discover tests
+python3 -m unittest discover tests
 ```
 Установить этот проект (из корня):
 ```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements.txt
+
 # Install the package
 pip install .
 
 # For development (editable install)
 pip install -e .
+
+# Alternative: Install with --user flag (not recommended for development)
+pip install . --user
 ```
 После установки им можно пользоваться:
 ```python
