@@ -1,17 +1,27 @@
 # python-package-template
 
-Простой пример-шаблон проекта python-пакета с проверкой стилей, тестами и разными стандартными файлами\папками  
-Все новые python-пакеты на github.com/EPC-MSU нужно создавать из этого шаблона
+This is a simple python package project template. It includes
+* Flake8 code style rules, controlled with Linter.
+* Github actions CI tools
+* Unit tests with a single example (add your new tests there)
+* Preconfigured gitignore file for usual python environments
+* requirements.ini to store the package names we depend on
+* TOX to test over different python versions
+* pyproject.toml as the package description file for package build
 
-Запустить этот проект (из корня):
+Python packages on github.com/EPC-MSU must be build using this template as it is nonbinding at first stages of development and lays the way for more advanced approach on the next steps.
+
+## Usage instructions
+
+Run the software (from the root dir):
 ```bash
 python3 -m hello_world
 ```
-Запустить тесты (из корня):
+Run tests (from the root dir):
 ```bash
 python3 -m unittest discover tests
 ```
-Установить этот проект (из корня):
+Install this package (from the root dir):
 ```bash
 # Create virtual environment
 python3 -m venv venv
@@ -29,14 +39,12 @@ pip install -e .
 # Alternative: Install with --user flag (not recommended for development)
 pip install . --user
 ```
-После установки им можно пользоваться:
+After the installation you can use the package in python:
 ```python
 import hello_world
 hello_world.say_hello()
 ```
 
-Пишите unit-тесты к своим пакетам в tests/
+Don't forget to update information in pyproject.toml to match your future project, based on this template: project name, version, dependencies, compatible python versions, etc.
 
-Не забудьте актуализировать информацию о пакете в pyproject.toml: имя проекта, версия, зависимости и пр.
-
-Создан в рамках https://ximc.ru/issues/44427
+Template was created due to https://ximc.ru/issues/44427
