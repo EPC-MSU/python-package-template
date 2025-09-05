@@ -18,7 +18,7 @@ python3 -m hello_world
 # Run all tests using unittest
 python3 -m unittest discover tests
 
-# Using tox (supports py34, py36)
+# Using tox (supports py36, py38)
 tox
 ```
 

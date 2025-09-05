@@ -5,7 +5,7 @@ This is a simple python package project template. It includes
 * Github actions CI tools
 * Unit tests with a single example (add your new tests there)
 * Preconfigured gitignore file for usual python environments
-* requirements.ini to store the package names we depend on
+* pyproject.toml optional-dependencies for development tools
 * TOX to test over different python versions
 * pyproject.toml as the package description file for package build
 
@@ -27,14 +27,11 @@ Install this package (from the root dir):
 python3 -m venv venv
 source venv/bin/activate
 
-# Install the package with development dependencies
+# Install the package with development dependencies (editable)
 pip install -e .[dev]
 
 # Or install the package only
 pip install .
-
-# For development (editable install)
-pip install -e .
 
 # Alternative: Install with --user flag (not recommended for development)
 pip install . --user
