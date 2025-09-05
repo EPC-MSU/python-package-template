@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python versions
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: |
-            3.8
-            3.10
+          python-version: 3.8
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
       - name: Install tox
         run: |
           python -m pip install --upgrade pip
