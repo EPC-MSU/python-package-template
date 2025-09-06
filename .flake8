@@ -15,7 +15,9 @@ exclude =
           # Python temporary files
           __pycache__,
           # External dependencies
-          venv
+          venv,
+          # Tox environments
+          .tox
 
 # Violations ignore list
 # ======================
