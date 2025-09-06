@@ -91,4 +91,8 @@ pip install .[dev] --user
 
 ## Architecture Notes
 
-This is a minimal Python package template with a single module (`hello_world.hello`) containing one function (`say_hello()`). The project follows standard Python packaging conventions and is designed as a starting template for new packages rather than a complex application.
+This is a minimal Python package template with a single module (`hello_world.hello`) containing two functions:
+- `say_hello()` - Main example function that prints and returns "hello"
+- `get_version()` - Returns the package version string using importlib.metadata
+
+The project follows standard Python packaging conventions and is designed as a starting template for new packages rather than a complex application.

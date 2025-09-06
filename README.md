@@ -3,6 +3,7 @@
 This is a simple python package project template. It includes
 * **Flake8** code style rules
 * **Semver** tag versioning with **bump2version**
+* Support of get_version() to display the current version
 * Unit tests with a single example (add your new tests there)
 * main/dev branches workflow in CI
 * Crossplatform testing meaning Win/Lin/Mac
@@ -59,7 +60,13 @@ pip install .
 After the installation you can use the package in python's venv:
 ```python
 import hello_world
+
+# Use the main function
 hello_world.say_hello()
+
+# Get package version
+version = hello_world.get_version()
+print(f"Package version: {version}")
 ```
 
 Don't forget to update information in pyproject.toml to match your future project, based on this template: project name, version, dependencies, optional-dependencies for development tools, compatible python versions, etc.
