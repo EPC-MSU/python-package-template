@@ -13,6 +13,7 @@ This is a simple python package project template. It includes
 * Github actions CI tools
     * Run linter on main and dev branches
     * Run integrated tests on main and dev branches
+    * Automated publishing of source and wheels in github releases
 
 
 Python packages on github.com/EPC-MSU must be build using this template as it is not very binding at first stages of development and lays the way for more advanced approaches on the next steps.
