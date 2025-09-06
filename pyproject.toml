@@ -29,10 +29,12 @@ dependencies = [
 dev = [
     "flake8",
     "tox",
+    "bump2version",
 ]
 all = [
     "flake8", 
     "tox",
+    "bump2version",
 ]
 
 [project.urls]
