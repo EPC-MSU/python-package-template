@@ -27,6 +27,16 @@ Build wheel package (from the root dir):
 ```bash
 python3 -m build --wheel
 ```
+Bump project version (requires venv since PEP 668):
+```bash
+# Create virtual environment and install dev dependencies
+python3 -m venv venv && source venv/bin/activate && pip install -e .[dev]
+
+# Bump version (patch: 0.0.1 → 0.0.2, minor: 0.0.1 → 0.1.0, major: 0.0.1 → 1.0.0)
+bump2version patch   # for bug fixes
+bump2version minor   # for new features  
+bump2version major   # for breaking changes
+```
 Install this package (requires venv since PEP 668, run from the root dir):
 ```bash
 # Create virtual environment

@@ -40,6 +40,20 @@ python3 -m build --wheel
 python3 -m build
 ```
 
+### Versioning
+```bash
+# Install dev dependencies first
+pip install -e .[dev]
+
+# Bump version automatically (creates commit and tag)
+bump2version patch   # 0.0.1 → 0.0.2 (bug fixes)
+bump2version minor   # 0.0.1 → 0.1.0 (new features)  
+bump2version major   # 0.0.1 → 1.0.0 (breaking changes)
+
+# Push tags to remote
+git push --tags
+```
+
 ### Installation
 ```bash
 # Create virtual environment (recommended)
