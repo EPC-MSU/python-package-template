@@ -1,21 +1,26 @@
 # python-package-template
 
 This is a simple python package project template. It includes
-* Flake8 code style rules, controlled with Linter
-* Github actions CI tools
+* **Flake8** code style rules
+* **Semver** tag versioning with **bump2version**
 * Unit tests with a single example (add your new tests there)
-* Preconfigured gitignore file for usual python environments
-* pyproject.toml optional-dependencies for development tools
-* TOX to test over different python versions
-* pyproject.toml as the package description file for package build
+* main/dev branches workflow in CI
+* Crossplatform testing meaning Win/Lin/Mac
+* **TOX** to test over different python versions
+* **pyproject.toml** as the package description file for package build
+* Preconfigured **.gitignore** file for usual python environments
+* Github actions CI tools
+    * Run linter on main and dev branches
+    * Run integrated tests on main and dev branches
 
-Python packages on github.com/EPC-MSU must be build using this template as it is nonbinding at first stages of development and lays the way for more advanced approach on the next steps.
+
+Python packages on github.com/EPC-MSU must be build using this template as it is not very binding at first stages of development and lays the way for more advanced approaches on the next steps.
 
 ## Usage instructions
 
 Note: instructions are for Linux/Mac. If you are using the Windows then change all ```python3``` commands to ```python```.
 
-Run the software (from the root dir):
+Run the python package (from the root dir):
 ```bash
 python3 -m hello_world
 ```
@@ -23,6 +28,8 @@ Run tests (from the root dir):
 ```bash
 python3 -m unittest discover tests
 ```
+### Building and releasing
+
 Build wheel package (from the root dir):
 ```bash
 python3 -m build --wheel
