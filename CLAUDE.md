@@ -46,12 +46,24 @@ python3 -m build
 pip install -e .[dev]
 
 # Bump version automatically (creates commit and tag)
-bump2version patch   # 0.0.1 → 0.0.2 (bug fixes)
-bump2version minor   # 0.0.1 → 0.1.0 (new features)  
-bump2version major   # 0.0.1 → 1.0.0 (breaking changes)
+bump2version patch   # 0.1.1 → 0.1.2 (bug fixes)
+bump2version minor   # 0.1.1 → 0.2.0 (new features)  
+bump2version major   # 0.1.1 → 1.0.0 (breaking changes)
 
-# Push tags to remote
+# Push tags to remote to trigger automated release
 git push --tags
+```
+
+### Automated Releases
+```bash
+# The release process is automated via GitHub Actions:
+# 1. Use bump2version to create version tag
+# 2. Push tag: git push --tags
+# 3. GitHub Actions automatically:
+#    - Builds wheel and source distributions
+#    - Creates GitHub release
+#    - Attaches build artifacts
+#    - Generates release notes
 ```
 
 ### Installation
