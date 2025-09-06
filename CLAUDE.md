@@ -4,7 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Python package template project (`hello_world`) that serves as a standard template for creating new Python packages. The project is primarily in Russian and follows a simple structure for a basic Python package with testing and linting setup.
+This is a Python package template project (`hello_world`) that serves as a standard template for creating new Python packages. The project follows a simple structure for a basic Python package with versioning, testing, linting, and Github CI.
+
+This project uses tools:
+* bump2version to synchronize version across different files
+* tox to test across different python versions
+* pyproject.toml for package information
+* unittesting for tests
 
 ## Common Commands
 
@@ -18,14 +24,14 @@ python3 -m hello_world
 # Run all tests using unittest
 python3 -m unittest discover tests
 
-# Using tox (supports py38, py310, py312)
+# Testing using tox
 tox
 ```
 
 ### Linting
 ```bash
-# Install with development dependencies first
-pip install -e .[dev]
+# Create virtual environment and install dev dependencies
+python3 -m venv venv && source venv/bin/activate && pip install -e .[dev]
 
 # Run flake8 linter
 python3 -m flake8 .
@@ -35,51 +41,32 @@ python3 -m flake8 .
 ```bash
 # Build wheel package
 python3 -m build --wheel
-
-# Build both source distribution and wheel
-python3 -m build
 ```
 
-### Versioning
+### Releasing and versioning
 ```bash
-# Install dev dependencies first
-pip install -e .[dev]
+# Create virtual environment and install dev dependencies
+python3 -m venv venv && source venv/bin/activate && pip install -e .[dev]
 
 # Bump version automatically (creates commit and tag)
-bump2version patch   # 0.1.1 → 0.1.2 (bug fixes)
-bump2version minor   # 0.1.1 → 0.2.0 (new features)  
-bump2version major   # 0.1.1 → 1.0.0 (breaking changes)
+bump2version patch   # for bug fixes
+bump2version minor   # for new features
+bump2version major   # for breaking changes
 
-# Push tags to remote to trigger automated release
-git push --tags
+python3 -m build --wheel
+# git tags in semver format are considered package releases
 ```
 
-### Automated Releases
+### Releases automated publishing
 ```bash
-# The release process is automated via GitHub Actions:
-# 1. Use bump2version to create version tag
-# 2. Push tag: git push --tags
+# The release publishing is automated via GitHub Actions:
+# 1. Make a local release with a new version
+# 2. Push the changes with 'git push'
 # 3. GitHub Actions automatically:
 #    - Builds wheel and source distributions
 #    - Creates GitHub release
 #    - Attaches build artifacts
 #    - Generates release notes
-```
-
-### Installation
-```bash
-# Create virtual environment (recommended)
-python3 -m venv venv
-source venv/bin/activate
-
-# Install the package with development dependencies
-pip install -e .[dev]
-
-# Or install the package only
-pip install .
-
-# Alternative: Install with --user flag
-pip install .[dev] --user
 ```
 
 ## Project Structure
@@ -92,19 +79,19 @@ pip install .[dev] --user
 - `pyproject.toml` - Modern package configuration and dependencies
 - `.flake8` - Flake8 linting configuration (max line length: 120, complexity: 14)
 - `tox.ini` - Tox configuration for testing across Python versions
-- `.github/workflows/` - CI/CD workflows for testing and linting
+- `.github/workflows/` - CI/CD workflows for testing, linting, releasing
 
 ## Key Configuration
 
 - **Python Version**: Requires Python 3.8+
 - **Flake8 Settings**: Max line length 120, max complexity 14, double quotes preferred
 - **Test Framework**: Standard Python unittest
-- **CI/CD**: GitHub Actions for automated testing and linting on main and dev-** branches
+- **CI/CD**: GitHub Actions for automated testing, linting and release publishing on main and dev-** branches
 
 ## Architecture Notes
 
-This is a minimal Python package template with a single module (`hello_world.hello`) containing two functions:
-- `say_hello()` - Main example function that prints and returns "hello"
-- `get_version()` - Returns the package version string using importlib.metadata
+Follow the project structure to place new code, tests, rules, documentation.
 
-The project follows standard Python packaging conventions and is designed as a starting template for new packages rather than a complex application.
+## Workflow rules for Claude and other AI agents
+
+After making changes to the code you should run tests and run linter. Then check for errors and fix issues until your task does not produce errors.
